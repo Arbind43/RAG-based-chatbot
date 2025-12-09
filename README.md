@@ -1,73 +1,119 @@
-# Welcome to your Lovable project
+📌 Project Description – RAG-Based Chatbot
+🧠 Overview
 
-## Project info
+The RAG-Based Chatbot is an intelligent conversational system designed to deliver accurate, context-aware, and domain-specific responses by integrating the power of Large Language Models (LLMs) with Retrieval-Augmented Generation (RAG) techniques.
+Traditional LLMs often hallucinate or provide incomplete answers when asked domain-specific questions. This project eliminates that problem by connecting the chatbot to a custom knowledge base, enabling it to fetch relevant information before generating a response.
 
-**URL**: https://lovable.dev/projects/664dab45-d18a-484b-aeac-10e5567fafb8
+Built using LangChain, FAISS, and embeddings-based semantic search, the chatbot achieves high accuracy, fast retrieval, and a scalable architecture suitable for real-world applications.
 
-## How can I edit this code?
+🎯 Objective
 
-There are several ways of editing your application.
+The main objective of this project is to:
 
-**Use Lovable**
+Build a chatbot capable of retrieving factual information from a dataset and generating reliable, context-rich answers.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/664dab45-d18a-484b-aeac-10e5567fafb8) and start prompting.
+Reduce hallucination by enabling retrieval + generation using the RAG pipeline.
 
-Changes made via Lovable will be committed automatically to this repo.
+Provide a modular, scalable, and efficient solution suitable for documentation QA, organizational knowledge systems, customer support, or educational use.
 
-**Use your preferred IDE**
+🚀 Key Features
+🔍 1. Retrieval-Augmented Generation (RAG) Pipeline
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Uses FAISS Vector Store for fast and accurate similarity search.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Stores text chunks as embeddings for semantic retrieval.
 
-Follow these steps:
+Ensures every answer is supported by relevant document context.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+📚 2. Custom Knowledge Base Support
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Ingest PDFs, text files, or domain-specific documents.
 
-# Step 3: Install the necessary dependencies.
-npm i
+Chunking and preprocessing pipeline for clean, optimized storage.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+🤖 3. Intelligent Response Generation
 
-**Edit a file directly in GitHub**
+Uses a powerful LLM (OpenAI / HuggingFace) for natural, coherent answers.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Combines retrieved context with model output to avoid hallucinations.
 
-**Use GitHub Codespaces**
+🔗 4. LangChain Integration
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Modular design using Chains, Retrievers, Prompt Templates, and Memory.
 
-## What technologies are used for this project?
+Easy to customize, extend, or integrate into larger applications.
 
-This project is built with:
+⚡ 5. Fast & Efficient Retrieval
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Built using FAISS, a high-performance vector index optimized for similarity search.
 
-## How can I deploy this project?
+🛠 6. Simple & Clean Architecture
 
-Simply open [Lovable](https://lovable.dev/projects/664dab45-d18a-484b-aeac-10e5567fafb8) and click on Share -> Publish.
+Easy to run and understand.
 
-## Can I connect a custom domain to my Lovable project?
+Suitable for beginners and advanced developers.
 
-Yes, you can!
+🏗️ Architecture (How It Works)
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Data Loading
+Text documents (PDF, TXT, etc.) are loaded into the system.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Chunking
+Large text is split into smaller, meaningful chunks.
+
+Embedding Generation
+Each chunk is converted into high-dimensional vectors using embedding models.
+
+Indexing using FAISS
+Embeddings are stored in a FAISS index for lightning-fast search.
+
+Query Processing
+When the user asks a question, the system:
+
+Converts the query into an embedding
+
+Finds the most similar text chunks
+
+Provides them as context to the language model
+
+Answer Generation
+The LLM generates a precise answer based on retrieved context.
+
+🧩 Tech Stack
+Component	Technology Used
+Language Model	OpenAI / HuggingFace LLM
+Retrieval	FAISS (Vector Search)
+Framework	LangChain
+Embeddings	Sentence Transformers / OpenAI Embeddings
+Backend	Python
+File Processing	PDF/Text loaders
+Environment	Conda / Virtualenv
+📂 Project Structure (Example)
+RAG-based-chatbot/
+│── data/                  # Knowledge base documents  
+│── embeddings/            # Stored vector index  
+│── app.py                 # Main chatbot application  
+│── ingest.py              # Script to process and index data  
+│── requirements.txt       # Dependencies  
+│── README.md              # Project documentation  
+
+▶️ How to Run the Project
+1️⃣ Clone the Repository
+git clone https://github.com/Arbind43/RAG-based-chatbot.git
+cd RAG-based-chatbot
+
+2️⃣ Install Dependencies
+pip install -r requirements.txt
+
+3️⃣ Ingest Your Data
+
+Add PDFs/text files inside the data/ folder, then run:
+
+python ingest.py
+
+4️⃣ Start the Chatbot
+python app.py
+
+5️⃣ Ask Anything!
+
+Your chatbot is now ready to answer domain-specific questions using your documents.
