@@ -6,6 +6,11 @@ Traditional LLMs often hallucinate or provide incomplete answers when asked doma
 
 Built using LangChain, FAISS, and embeddings-based semantic search, the chatbot achieves high accuracy, fast retrieval, and a scalable architecture suitable for real-world applications.
 
+
+
+
+
+
 🎯 Objective
 
 The main objective of this project is to:
@@ -15,6 +20,14 @@ Build a chatbot capable of retrieving factual information from a dataset and gen
 Reduce hallucination by enabling retrieval + generation using the RAG pipeline.
 
 Provide a modular, scalable, and efficient solution suitable for documentation QA, organizational knowledge systems, customer support, or educational use.
+
+
+
+
+
+
+
+
 
 🚀 Key Features
 🔍 1. Retrieval-Augmented Generation (RAG) Pipeline
@@ -31,6 +44,14 @@ Ingest PDFs, text files, or domain-specific documents.
 
 Chunking and preprocessing pipeline for clean, optimized storage.
 
+
+
+
+
+
+
+
+
 🤖 3. Intelligent Response Generation
 
 Uses a powerful LLM (OpenAI / HuggingFace) for natural, coherent answers.
@@ -43,6 +64,15 @@ Modular design using Chains, Retrievers, Prompt Templates, and Memory.
 
 Easy to customize, extend, or integrate into larger applications.
 
+
+
+
+
+
+
+
+
+
 ⚡ 5. Fast & Efficient Retrieval
 
 Built using FAISS, a high-performance vector index optimized for similarity search.
@@ -52,6 +82,18 @@ Built using FAISS, a high-performance vector index optimized for similarity sear
 Easy to run and understand.
 
 Suitable for beginners and advanced developers.
+
+
+
+
+
+
+
+
+
+
+
+
 
 🏗️ Architecture (How It Works)
 
@@ -78,6 +120,16 @@ Provides them as context to the language model
 
 Answer Generation
 The LLM generates a precise answer based on retrieved context.
+
+
+
+
+
+
+
+
+
+
 
 🧩 Tech Stack
 Component	Technology Used
